@@ -55,11 +55,8 @@
             margin: 0 15px;
             font-size: 18px;
             display: inline-block;
-            min-width: 80px; /* Ensure minimum width for readability */
-            max-width: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            justify-content: flex-start;
+            width: 100px; /* Ensure fixed width for each item */
+            text-align: center;
         }
         nav a:hover {
             text-transform: uppercase;
@@ -104,21 +101,24 @@
             box-sizing: border-box;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 900px) and (min-width: 500px) {
             body {
                 font-size: 18px;
             }
             nav {
                 padding-left: 5px;
-                justify-content: flex-start;
+                justify-content: left;
+                max-width: 500px;
             }
             nav a {
-                margin: 0 10px;
-                font-size: 16px;
+                margin: 0 20px;
+                font-size: 18px;
+                text-align: center;
+                width: 100px; /* Ensure fixed width for each item */
             }
             .social-icons {
-                padding-right: 5px;
-                justify-content: flex-end;
+                padding-right: 6px;
+                justify-content: right;
             }
             header {
                 padding: 10px;
@@ -128,28 +128,37 @@
             }
         }
 
-        @media (max-width: 600px) {
-            header {
-                flex-direction: row;
-                align-items: normal;
-                width:auto;
-            }
+        @media (max-width: 500px) {
             nav {
+                padding-left: 2px;
                 justify-content: left;
-                width: 100%;
-            }
-            .social-icons {
-                justify-content: right;
-                width: 100%;
-                padding-right: 0;
+                max-width: 100px;
             }
             nav a {
+                margin: 0px;
                 font-size: 14px;
-                margin: 0 5px;
+                text-align: center;
+                width: 80px; /* Ensure fixed width for each item */
+                color: #282828;
+                text-decoration: none;
+                min-width: 80px; /* Ensure minimum width for readability */
+            }
+            .social-icons {
+                padding-right: 6px;
+                justify-content: right;
             }
             .social-icons a {
-                font-size: 14px;
                 margin: 0 5px;
+                font-size: 13px;
+            }
+            header {
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+                justify-content: space-between;
+            }
+            h1{
+                font-size: 35px;
             }
         }
     </style>
