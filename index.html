@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:,"/>
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>vid timmermans</title>
     <link rel="icon" href="favicon.png" type="image/png">
@@ -29,41 +29,43 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-color: #f0f0f0;
+            background-color: #ffffff;
             font-size: 25px;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         header {
-            background-color: #f0f0f0;
+            background-color: #ffffff;
             padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            width: 100%; /* Ensure full width */
+            box-sizing: border-box; /* Include padding in width */
+            margin-top: 30px;
         }
         nav {
             display: flex;
-            flex-wrap: wrap;
-            margin-top: 10px;
             padding-left: 15px;
         }
         nav a {
             color: #282828;
             text-decoration: none;
-            margin: 0 5px;
+            margin: 0 0px;
             font-size: 18px;
-            text-align: center;
             display: inline-block;
-            width: 100px; /* Fixed width to prevent shift */
+            width: 100px; 
+            text-align: center;
+            min-width: 80px; /* Ensure minimum width for readability */
         }
         nav a:hover {
             text-transform: uppercase;
         }
         .social-icons {
             display: flex;
-            margin-top: 10px;
             padding-right: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-wrap: nowrap;
+            justify-content: right;
         }
         .social-icons a {
             color: #282828;
@@ -81,6 +83,8 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 10vh;
+            width: 100%;
+            box-sizing: border-box;
         }
         h1 {
             color: #282828;
@@ -88,52 +92,39 @@
             margin: 0;
         }
         footer {
-            background-color: #f0f0f0;
+            background-color: #ffffff;
             color: #868686;
             text-align: center;
             padding: 10px 0;
             font-size: 12px;
             width: 100%;
+            box-sizing: border-box;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             body {
                 font-size: 18px;
             }
             nav {
-                flex-direction: row;
-                align-items: left;
-                margin-top: 10px;
-                padding-left: 8px;
+                padding-left: 0;
+                justify-content: flex-start;
             }
             nav a {
-                margin: 0 5px;
-                width: auto;
-                font-size: 12px;
+                margin: 0 0px;
+                min-width: 60px; /* Reduce min width for smaller screens */
+                font-size: 18px;
+                width: 100px;
+                display: inline-block;
             }
             .social-icons {
-                flex-direction: row;
-                align-items: right;
-                display: flex;
-                margin-top: 10px;
-                padding-right: 10px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .social-icons a {
-                margin: 10px 0;
-                color: #282828;
-                text-decoration: none;
-                margin: 0 10px;
-                font-size: 10px;
+                padding-right: 0;
+                justify-content: flex-end;
             }
             header {
-                flex-direction: row;
-                align-items: center;
                 padding: 10px;
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
+                width: 100%;
+                box-sizing: border-box;
+                flex-wrap: nowrap; /* Prevent wrapping */
             }
         }
     </style>
