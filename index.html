@@ -47,6 +47,7 @@
         nav {
             display: flex;
             padding-left: 15px;
+            flex-wrap: nowrap;
         }
         nav a {
             color: #282828;
@@ -57,6 +58,10 @@
             width: 100px; 
             text-align: center;
             min-width: 80px; /* Ensure minimum width for readability */
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            justify-content: flex-start;
         }
         nav a:hover {
             text-transform: uppercase;
@@ -65,7 +70,7 @@
             display: flex;
             padding-right: 25px;
             flex-wrap: nowrap;
-            justify-content: right;
+            justify-content: flex-end;
         }
         .social-icons a {
             color: #282828;
@@ -106,18 +111,19 @@
                 font-size: 18px;
             }
             nav {
-                padding-left: 0;
+                padding-left: 3px;
                 justify-content: flex-start;
             }
             nav a {
                 margin: 0 0px;
-                min-width: 60px; /* Reduce min width for smaller screens */
+                min-width: auto;
                 font-size: 18px;
-                width: 100px;
+                width: 110px;
                 display: inline-block;
+                max-width: 102px;
             }
             .social-icons {
-                padding-right: 0;
+                padding-right: 3px;
                 justify-content: flex-end;
             }
             header {
@@ -125,6 +131,7 @@
                 width: 100%;
                 box-sizing: border-box;
                 flex-wrap: nowrap; /* Prevent wrapping */
+                justify-content: space-between;
             }
         }
     </style>
