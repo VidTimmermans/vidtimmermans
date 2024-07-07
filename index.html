@@ -52,11 +52,9 @@
         nav a {
             color: #282828;
             text-decoration: none;
-            margin: 0 0px;
+            margin: 0 15px;
             font-size: 18px;
             display: inline-block;
-            width: 100px; 
-            text-align: center;
             min-width: 80px; /* Ensure minimum width for readability */
             max-width: 100%;
             white-space: nowrap;
@@ -105,44 +103,52 @@
             width: 100%;
             box-sizing: border-box;
         }
-        .menu-icon {
-            display: none;
-            cursor: pointer;
-            font-size: 24px;
-            padding-right: 25px;
-        }
+
         @media (max-width: 900px) {
             body {
                 font-size: 18px;
             }
             nav {
-                padding-left: 3px;
+                padding-left: 5px;
                 justify-content: flex-start;
-                display: none; /* Hide navigation by default */
-                flex-direction: column; /* Stack links vertically */
-                width: 100%;
-            }
-            nav.show {
-                display: flex; /* Show navigation when .show class is added */
             }
             nav a {
-                margin: 10px 0; /* Space out links vertically */
-                text-align: left; /* Align text to the left */
-            }
-            .menu-icon {
-                display: block; /* Show the menu icon */
+                margin: 0 10px;
+                font-size: 16px;
             }
             .social-icons {
-                padding-right: 3px;
+                padding-right: 5px;
                 justify-content: flex-end;
             }
             header {
                 padding: 10px;
                 width: 100%;
                 box-sizing: border-box;
-                flex-wrap: nowrap; /* Prevent wrapping */
                 justify-content: space-between;
-                max-width: 360px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                justify-content: center;
+                width: 100%;
+            }
+            .social-icons {
+                justify-content: center;
+                width: 100%;
+                padding-right: 0;
+            }
+            nav a {
+                font-size: 14px;
+                margin: 0 5px;
+            }
+            .social-icons a {
+                font-size: 14px;
+                margin: 0 5px;
             }
         }
     </style>
@@ -150,21 +156,10 @@
         document.addEventListener('contextmenu', function(event) {
             event.preventDefault();
         });
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuIcon = document.querySelector('.menu-icon');
-            const nav = document.querySelector('nav');
-
-            menuIcon.addEventListener('click', function() {
-                nav.classList.toggle('show');
-            });
-        });
     </script>
 </head>
 <body>
     <header>
-        <div class="menu-icon">
-            <i class="fas fa-bars"></i>
-        </div>
         <nav>
             <a href="locations.html">locations</a>
             <a href="about me.html">about me</a>
