@@ -99,29 +99,38 @@
                 font-size: 18px;
             }
             nav {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                align-items: left;
+                margin-top: 10px;
+                padding-left: 8px;
             }
             nav a {
-                margin: 10px 0;
+                margin: 0px 5px;
                 width: auto;
             }
             .social-icons {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                align-items: right;
+                display: flex;
+                margin-top: 10px;
+                padding-right: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
             .social-icons a {
                 margin: 10px 0;
+                color: #282828;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 16px;
             }
             header {
-                flex-direction: column;
+                flex-direction: row;
                 align-items: center;
-            }
-            h1 {
-                font-size: 24px;
-            }
-            footer {
-                font-size: 14px;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
             }
         }
     </style>
@@ -145,7 +154,7 @@
         </div>
     </header>
     <div class="content">
-        <h1>vid timmermanss</h1>
+        <h1>vid timmermans</h1>
     </div>
     <footer>
         &copy; 2024 vid timmermans all rights reserved
