@@ -28,20 +28,25 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-color: #f7f7f7;
+            background-color: #ffffff;
             font-size: 15px;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         header {
-            background-color: #f7f7f7;
+            background-color: #ffffff;
             padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            width: 100%; /* Ensure full width */
+            box-sizing: border-box; /* Include padding in width */
+            margin-top: 30px;
         }
         nav {
             display: flex;
-            margin-top: 40px;
             padding-left: 15px;
+            flex-wrap: nowrap;
         }
         nav a {
             color: #282828;
@@ -49,7 +54,7 @@
             margin: 0 0px;
             font-size: 18px;
             display: inline-block;
-            width: 100px; 
+            width: 100px; /* Ensure fixed width for each item */
             text-align: center;
         }
         nav a:hover {
@@ -57,13 +62,14 @@
         }
         .social-icons {
             display: flex;
-            margin-top: 40px;
             padding-right: 25px;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
         }
         .social-icons a {
             color: #282828;
             text-decoration: none;
-            margin: 0 13px;
+            margin: 0 10px;
             font-size: 16px;
         }
         .social-icons a:hover {
@@ -76,30 +82,96 @@
             justify-content: flex-start;
             align-items: center;
             margin-top: 100px;
+            width: 100%;
+            box-sizing: border-box;
         }
         h1 {
             color: #282828;
-            text-align: center;
+            text-align: left;
             margin: 5px 0px 50px 0px;
+        }
+        footer {
+            background-color: #ffffff;
+            color: #868686;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 12px;
+            width: 100%;
+            box-sizing: border-box;
         }
         h2 {
             color:#282828;
             text-align: left;
             font-size: 17px;
-            margin: 0px 0px 50px 0px;
+            margin: 0px 0px 0px 0px;
             text-decoration: none;
             font-weight: 300;
         }
         h2 p {
-            margin: 5px 0;
+            margin: 0px 0;
         }
-        footer {
-            background-color: #f7f7f7;
-            color: #868686;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 12px;
-            width: 100%;
+        @media (max-width: 900px) and (min-width: 500px) {
+            body {
+                font-size: 15px;
+            }
+            nav {
+                padding-left: 5px;
+                justify-content: left;
+                max-width: 500px;
+            }
+            nav a {
+                margin: 0 0px;
+                font-size: 18px;
+                text-align: center;
+                width: 100px; /* Ensure fixed width for each item */
+            }
+            .social-icons {
+                padding-right: 6px;
+                justify-content: right;
+            }
+            header {
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+                justify-content: space-between;
+            }
+        }
+        @media (max-width: 500px) {
+            body {
+                font-size: 15px;
+            }
+            nav {
+                padding-left: 2px;
+                justify-content: left;
+                max-width: 100px;
+            }
+            nav a {
+                margin: 0px;
+                font-size: 14px;
+                text-align: center;
+                width: 80px; /* Ensure fixed width for each item */
+                color: #282828;
+                text-decoration: none;
+                min-width: 80px; /* Ensure minimum width for readability */
+            }
+            .social-icons {
+                padding-right: 6px;
+                justify-content: right;
+            }
+            .social-icons a {
+                margin: 0 5px;
+                font-size: 13px;
+            }
+            header {
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+                justify-content: space-between;
+            }
+            h1{
+                font-size: 28px;
+                margin: 5px 0px 30px 0px;
+            }
         }
     </style>
     <script>
