@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>vid timmermans - cologne2024</title>
+    <link rel="icon" href="../favicon.png" type="image/png">
+
+    <!--Meta Tags for SEO-->
+    <meta name="description" content="Photos of Cologne, 2024.">
+    <meta name="keywords" content="Cologne, 2024, fotografie, Vid Timmermans, streetphotography, photography, fotograaf, photographer">
+    <meta name="author" content="Vid Timmermans">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.vidtimmermans.com/cologne-2024">
+
+    <!--Open Graph Meta Tags-->
+    <meta property="og:title" content="cologne - 2024">
+    <meta property="og:description" content="Photos of Cologne, 2024.">
+    <meta property="og:url" content="https://www.vidtimmermans.com/cologne-2024">
+    <meta property="og:type" content="website">
+
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #ffffff;
+            font-size: 15px;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        header {
+            background-color: #ffffff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%; /* Ensure full width */
+            box-sizing: border-box; /* Include padding in width */
+            margin-top: 30px;
+        }
+        nav {
+            display: flex;
+            padding-left: 15px;
+            flex-wrap: nowrap;
+        }
+        nav a {
+            color: #282828;
+            text-decoration: none;
+            margin: 0 0px;
+            font-size: 18px;
+            display: inline-block;
+            width: 100px; /* Ensure fixed width for each item */
+            text-align: center;
+        }
+        nav a:hover {
+            text-transform: uppercase;
+        }
+        .social-icons {
+            display: flex;
+            padding-right: 25px;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+        }
+        .social-icons a {
+            color: #282828;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        .social-icons a:hover {
+            color: #868686;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 100px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #282828;
+            text-align: left;
+            margin: 5px 0 0px;
+        }
+        footer {
+            background-color: #ffffff;
+            color: #868686;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 12px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        h2 {
+            color:#282828;
+            text-align: left;
+            font-size: 17px;
+            margin: 0px 0px 50px 0px;
+            text-decoration: none;
+            font-weight: 300;
+        }
+        .responsive-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border: 12px solid #ffffff;
+            box-sizing: border-box;
+        }
+        @media (min-width: 768px) {
+            .responsive-img {
+                max-width: 75%;
+                margin: 0 0 100px 0;
+            }
+        }
+        @media (max-width: 900px) and (min-width: 500px) {
+            body {
+                font-size: 15px;
+            }
+            nav {
+                padding-left: 5px;
+                justify-content: left;
+                max-width: 500px;
+            }
+            nav a {
+                margin: 0 0px;
+                font-size: 18px;
+                text-align: center;
+                width: 100px; /* Ensure fixed width for each item */
+            }
+            .social-icons {
+                padding-right: 6px;
+                justify-content: right;
+            }
+            header {
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+                justify-content: space-between;
+            }
+        }
+        @media (max-width: 500px) {
+            body {
+                font-size: 15px;
+            }
+            nav {
+                padding-left: 2px;
+                justify-content: left;
+                max-width: 100px;
+            }
+            nav a {
+                margin: 0px;
+                font-size: 14px;
+                text-align: center;
+                width: 80px; /* Ensure fixed width for each item */
+                color: #282828;
+                text-decoration: none;
+                min-width: 80px; /* Ensure minimum width for readability */
+            }
+            .social-icons {
+                padding-right: 6px;
+                justify-content: right;
+            }
+            .social-icons a {
+                margin: 0 5px;
+                font-size: 13px;
+            }
+            header {
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+                justify-content: space-between;
+            }
+            h1{
+                font-size: 28px;
+                margin: 5px 0px 30px 0px;
+            }
+        }
+        .back-to-top {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        .back-to-top a {
+            color: #868686;
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.3s ease-in-out;
+        }
+        .back-to-top a:hover {
+            text-transform: uppercase;
+        }
+    </style>
+
+    <!-- JavaScript to Disable Right-Click -->
+    <script>
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+    </script>
+</head>
+<body>
+    <header id="top">
+        <nav>
+            <a href="../locations.html">locations</a>
+            <a href="../about me.html">about me</a>
+            <a href="../contact.html">contact</a>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/vidtimmermans" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vidtimmermans" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="mailto:timmermansvid@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </header>
+    <div class="content">
+        <h1>cologne</h1>
+        <h2>2024</h2>
+        <img src="DSC04557.jpg" class="responsive-img">
+        <img src="DSC04577.jpg" class="responsive-img">
+        <img src="DSC04562.jpg" class="responsive-img">
+        <img src="DSC04558.jpg" class="responsive-img">
+        <img src="DSC04567.jpg" class="responsive-img">
+    </div>
+    
+    <div class="back-to-top" id="backToTop">
+        <a href="#top">↑ back to top</a>
+    </div>
+
+    <footer>
+        &copy; 2024 vid timmermans all rights reserved
+    </footer>
+
+</body>
+</html>
