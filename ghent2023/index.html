@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:,">
+    <link rel="icon" href="data:,"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>vid timmermans</title>
-    <link rel="icon" href="favicon.png" type="image/png">
+    <title>vid timmermans - ghent2023</title>
+    <link rel="icon" href="../favicon.png" type="image/png">
 
     <!--Meta Tags for SEO-->
-    <meta name="description" content="Homepage from the photography of Vid Timmermans.">
-    <meta name="keywords" content="vidtimmermans, straat fotografie, fotografie, Vid Timmermans, streetphotography, photography, fotograaf, photographer">
+    <meta name="description" content="Photos of Ghent, 2023.">
+    <meta name="keywords" content="Ghent, 2023, fotografie, Vid Timmermans, streetphotography, photography, fotograaf, photographer">
     <meta name="author" content="Vid Timmermans">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.vidtimmermans.com">
+    <link rel="canonical" href="https://www.vidtimmermans.com/ghent-2023">
 
     <!--Open Graph Meta Tags-->
-    <meta property="og:title" content="vid timmermans">
-    <meta property="og:description" content="Homepage from the photography of Vid Timmermans.">
-    <meta property="og:url" content="https://www.vidtimmermans.com">
-    <meta property="og:type" content="website">    
-    
+    <meta property="og:title" content="ghent - 2023">
+    <meta property="og:description" content="Photos of Ghent, 2023.">
+    <meta property="og:url" content="https://www.vidtimmermans.com/ghent-2023">
+    <meta property="og:type" content="website">
+
     <style>
         body {
             font-family: Helvetica, Arial, sans-serif;
@@ -30,7 +30,7 @@
             flex-direction: column;
             min-height: 100vh;
             background-color: #ffffff;
-            font-size: 25px;
+            font-size: 15px;
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         header {
@@ -80,16 +80,16 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            margin-bottom: 10vh;
+            margin-top: 100px;
             width: 100%;
             box-sizing: border-box;
         }
         h1 {
             color: #282828;
-            text-align: center;
-            margin: 0;
+            text-align: left;
+            margin: 5px 0 0px;
         }
         footer {
             background-color: #ffffff;
@@ -100,10 +100,30 @@
             width: 100%;
             box-sizing: border-box;
         }
-
+        h2 {
+            color:#282828;
+            text-align: left;
+            font-size: 17px;
+            margin: 0px 0px 50px 0px;
+            text-decoration: none;
+            font-weight: 300;
+        }
+        .responsive-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border: 12px solid #ffffff;
+            box-sizing: border-box;
+        }
+        @media (min-width: 768px) {
+            .responsive-img {
+                max-width: 75%;
+                margin: 0 0 100px 0;
+            }
+        }
         @media (max-width: 900px) and (min-width: 500px) {
             body {
-                font-size: 18px;
+                font-size: 15px;
             }
             nav {
                 padding-left: 5px;
@@ -127,8 +147,10 @@
                 justify-content: space-between;
             }
         }
-
         @media (max-width: 500px) {
+            body {
+                font-size: 15px;
+            }
             nav {
                 padding-left: 2px;
                 justify-content: left;
@@ -158,8 +180,25 @@
                 justify-content: space-between;
             }
             h1{
-                font-size: 35px;
+                font-size: 28px;
+                margin: 5px 0px 30px 0px;
             }
+        }
+        .back-to-top {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        .back-to-top a {
+            color: #868686;
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.3s ease-in-out;
+        }
+        .back-to-top a:hover {
+            text-transform: uppercase;
         }
     </style>
     <script>
@@ -169,11 +208,11 @@
     </script>
 </head>
 <body>
-    <header>
+    <header id="top">
         <nav>
-            <a href="locations">locations</a>
-            <a href="aboutme">about me</a>
-            <a href="contact">contact</a>
+            <a href="../locations.html">locations</a>
+            <a href="../about me.html">about me</a>
+            <a href="../contact.html">contact</a>
         </nav>
         <div class="social-icons">
             <a href="https://www.instagram.com/vidtimmermans" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -182,10 +221,35 @@
         </div>
     </header>
     <div class="content">
-        <h1>vid timmermans</h1>
+        <h1>ghent</h1>
+        <h2>2023</h2>
+        <img src="DSC09029.jpg" class="responsive-img">
+        <img src="DSC09032.jpg" class="responsive-img">
+        <img src="DSC08911.jpg" class="responsive-img">
+        <img src="DSC08940.jpg" class="responsive-img">
+        <img src="DSC00958.jpg" class="responsive-img">
+        <img src="DSC09637.jpg" class="responsive-img">
+        <img src="DSC09521.jpg" class="responsive-img">
+        <img src="DSC09632 (2).jpg" class="responsive-img">
+        <img src="DSC09675-2.jpg" class="responsive-img">
+        <img src="DSC09715.jpg" class="responsive-img">
+        <img src="DSC09671-Pano.jpg" class="responsive-img">
+        <img src="DSC09753.jpg" class="responsive-img">
+        <img src="DSC09445-2.jpg" class="responsive-img">
+        <img src="DSC09889.jpg" class="responsive-img">
+        <img src="DSC09827.jpg" class="responsive-img">
+        <img src="DSC09965.jpg" class="responsive-img">
+        <img src="DSC09979.jpg" class="responsive-img">
+        <img src="DSC00711.jpg" class="responsive-img">
     </div>
+    
+    <div class="back-to-top" id="backToTop">
+        <a href="#top">↑ back to top</a>
+    </div>
+
     <footer>
         &copy; 2024 vid timmermans all rights reserved
     </footer>
+
 </body>
 </html>
