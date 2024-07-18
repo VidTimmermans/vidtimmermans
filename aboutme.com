@@ -184,7 +184,7 @@
     <header>
         <nav>
             <a href="locations.html">locations</a>
-            <a href="aboutme">about me</a>
+            <a href="aboutme.com">about me</a>
             <a href="contact.html">contact</a>
         </nav>
         <div class="social-icons">
