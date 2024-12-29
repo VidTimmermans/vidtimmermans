@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>vid timmermans - heimat</title>
+    <link rel="icon" href="../favicon.png" type="image/png">
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Project of Vid Timmermans.">
+    <meta name="keywords" content="fotografie, Vid Timmermans, streetphotography, photography, fotograaf, photographer">
+    <meta name="author" content="Vid Timmermans">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.vidtimmermans.com/projects/heimat">
+ 
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="heimat">
+    <meta property="og:description" content="Project of Vid Timmermans.">
+    <meta property="og:url" content="https://www.vidtimmermans.com/project/heimat">
+    <meta property="og:type" content="website">
+    
+    <style>
+            .responsive-img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border: 12px solid #ffffff;
+                box-sizing: border-box;
+            }
+            @media (min-width: 768px) {
+                .responsive-img {
+                    max-width: 75%;
+                    margin: 0 0 100px 0;
+                }
+            }
+            .back-to-top {
+                text-align: center;
+                margin: 20px 0;
+            }
+            .back-to-top.visible {
+                opacity: 1;
+            }
+            .back-to-top a {
+                color: #868686;
+                text-decoration: none;
+                font-size: 12px;
+                transition: color 0.3s ease-in-out;
+            }
+            .back-to-top a:hover {
+                text-transform: uppercase;
+            }
+ /* Hide scrollbar for Chrome, Safari and Opera */
+            .example::-webkit-scrollbar {
+                display: none;
+            }
+
+            /* Hide scrollbar for IE, Edge and Firefox */
+            .example {
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+            body {
+                font-family: Helvetica, Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                background-color: #ffffff;
+                font-size: 20px;
+                overflow-x: hidden; /* Prevent horizontal scrolling */
+                color: #282828;
+                text-decoration: none;
+                max-width: 100%;
+                max-height: 100%;
+            }
+            /* Style links in the body content */
+            .content a, .locations a {
+                color: #282828;
+                text-decoration: none;
+            }
+
+            .content a:hover, .locations a:hover {
+                text-transform: uppercase;
+            }
+
+
+            .container {
+                flex: 1;
+                display: flex; /* Correct */
+                justify-content: space-between;
+                align-items: center;
+                margin: 30px 0 0 0;
+                flex-direction: column;
+                box-sizing: border-box;
+                max-height: 100%;
+            }
+
+            header {
+                background-color: #ffffff;
+                padding: 10px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%; /* Ensure full width */
+                box-sizing: border-box; /* Include padding in width */
+                background-color: #ffffff;
+                font-size: 30px;
+                overflow-x: hidden; /* Prevent horizontal scrolling */
+            }
+
+            nav {
+                display: inline-block;
+                padding: 0px 0 0 15px; /* Remove padding around navigation */
+                margin: 0px 0 ; /* Remove margin from navigation */
+            }
+
+            nav a {
+                color: #282828;
+                text-decoration: none;
+                margin: 0 5px 0 10px; /* Space between navigation links */
+                padding: 0 0px 0 0px; /* Padding around navigation links */
+                font-size: 20px;
+                display: inline-block;
+                text-align: center;
+                width: 100px; /* Set a fixed width for navigation links */
+                white-space: nowrap; /* Prevent text from wrapping */
+                overflow: visible; /* Hide overflow text */
+            }
+
+            nav a:hover {
+                text-transform: uppercase; /* Transform text to uppercase on hover */
+            }
+
+            .social-icons {
+                display: flex;
+                padding-right: 0px; /* Remove padding around social icons */
+                margin-right: 20px; /* Remove margin around social icons */
+                justify-content: flex-end;
+            }
+
+            .social-icons a {
+                color: #282828;
+                text-decoration: none;
+                margin: 0 8px; /* Adjust margin between icons */
+                font-size: 16px;
+            }
+
+            .social-icons a:hover {
+                color: #868686;
+            }
+
+            .content {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                width: 100%;
+                box-sizing: border-box;
+                position: relative;
+                max-height: 100%;
+                margin-top: 100px;
+                text-align: left; /* Zorgt dat de tekst niet gecentreerd wordt */
+                min-height: 80vh;
+            }
+
+            h1 {
+                color: #282828;
+                text-align: center;
+                margin: 5px 0 0px 0;
+                font-size: 40px;
+            }
+            h2 {
+                color:#282828;
+                text-align: center;
+                font-size: 17px;
+                margin: 0px 0px 0px 0px;
+                text-decoration:none;
+                font-weight: 300;
+                }
+            h3 {
+                color: #282828;
+                text-align: justify;
+                font-size: 15px;
+                padding: 0 15%;
+                text-decoration: none;
+                font-weight: 300;
+            }
+            h2 p {
+                margin: 0px 0 20px;
+            }
+
+            footer {
+                background-color: #ffffff;
+                color: #868686;
+                text-align: center;
+                padding: 10px 0;
+                font-size: 12px;
+                width: 100%;
+                box-sizing: border-box;
+                margin-top: auto; /* Push the footer to the bottom */
+                position: relative;
+            }
+
+            /* New styles for the mobile navigation */
+            .menu-toggle {
+                display: none;
+                font-size: 20px; /* Same font size as nav links */
+                color: #282828;
+                cursor: pointer;
+                text-transform: none; /* No uppercase transform */
+                margin: 0; /* No extra margin */
+                text-decoration: none;
+                width: 100px; /* Same width as nav links */
+                text-align: left; /* Center align text */
+                padding-left: 30px;
+            }
+
+            .mobile-nav {
+                display: flex; /* Ensure the nav is flex for hidden transitions */
+                flex-direction: column;
+                align-items: flex-start; /* Align items to the start */
+                background-color: #ffffff;
+                width: 100%;
+                box-sizing: border-box;
+                overflow: hidden; /* Use overflow hidden to create the sliding effect */
+                position: relative; /* To push other content down */
+                z-index: 1; /* Ensure it's above other elements */
+                padding-left: 27px;
+                max-height: 0px; /* Start with zero height */
+                transition: max-height 0.3s ease-out; /* Transition for max-height */
+            }
+
+            .mobile-nav a {
+                font-size: 20px;
+                text-align: left;
+                width: 100%;
+                box-sizing: border-box;
+                color: #282828;
+                text-decoration: none;
+            }
+
+            .mobile-nav a:hover {
+                text-transform: uppercase;
+            }
+
+            .menu-toggle:hover {
+                text-transform: uppercase;
+            }
+
+            .mobile-nav.open {
+                max-height: 500px; /* A large enough max-height to show content */
+            }
+        @media (max-width: 8in) {
+            
+            body {
+                font-size: 15px;
+            }
+            header {
+                margin-top: 0px;
+            }
+            nav {
+                padding-left: 5px;
+                justify-content: left;
+                max-width: 500px;
+                display: none; /* Hide the normal nav */
+                margin: 0px;
+            }
+
+            .menu-toggle {
+                display: block; /* Show the 'menu' text */
+            }
+
+            .mobile-nav a {
+                margin: 0px; /* Ensure no margin for mobile nav links */
+                padding: 2px; /* Adjust padding for mobile links */
+            }
+            .social-icons {
+                padding-right: 0px;
+                justify-content: right;
+            }
+            h1{
+                font-size: 30px;
+            }
+            h2{
+                text-align: center;
+            }
+            h3{
+                padding: 0 12px;
+            }
+        }
+
+        @media (max-width: 4in) {
+            .mobile-nav a {
+                font-size: 18px; /* Smaller font for smaller screens */
+            }
+            .menu-toggle {
+                font-size: 18px;
+            }
+            h1 {
+                margin-top: -50px;
+                font-size: 28px;
+                display: flex;
+                align-items: center;     /* centers vertically */
+            }
+            .social-icons {
+                padding-right: 6px;
+                justify-content: right;
+            }
+            .selected-works {
+                font-size: 15px;
+            }
+            .selected-works h2 {
+                font-size: 20px;
+            }
+            .social-icons a {
+                margin: 0 5px;
+                font-size: 13px;
+            }
+        }
+        
+            .back-to-top {
+                text-align: center;
+                margin: 20px 0;
+            }
+            .back-to-top.visible {
+                opacity: 1;
+            }
+            .back-to-top a {
+                color: #868686;
+                text-decoration: none;
+                font-size: 12px;
+                transition: color 0.3s ease-in-out;
+            }
+            .back-to-top a:hover {
+                text-transform: uppercase;
+            }
+        
+    </style>
+    <script>
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="/">home</a>
+            <a href="/locations">locations</a>
+            <a href="/projects">projects</a>
+            <a href="/about">about</a>
+            <a href="/contact">contact</a>
+        </div>
+        <header>
+            <span class="menu-toggle">menu</span>
+            <nav>
+                <a href="/">home</a>
+                <a href="/locations">locations</a>
+                <a href="/projects">projects</a>
+                <a href="/about">about</a>
+                <a href="/contact">contact</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/vidtimmermans" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@vidtimmermans" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="mailto:timmermansvid@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </header>
+        <div class="content">
+            <h1>heimat</h1>
+            <h2>2024 - ongoing</h2>
+            <br>
+            <h3>"heimat" is een fotoproject dat zich richt op mijn thuis in België, Zwitserland en Kroatië, drie plaatsen die een diepe betekenis hebben voor mij vanwege mijn achtergrond en familiebanden, ze voelen elk als een stukje thuis. Dat gevoel van "thuis" is niet altijd eenvoudig en soms is het lastig om precies te weten waar je echt thuishoort. Deze zoektocht vormt de basis van dit project.<br> <br>
+                In het project ga ik opzoek naar de verschillen en overeenkomsten tussen deze landen, de schoonheid van het dagelijkse leven en de complexiteit van "thuis". Zowel de fysieke omgeving als het gevoel "thuis" worden in beeld gebracht, zo wil ik aantonen hoe mijn foto’s zich aanpassen afhankelijk van de locatie en hoe elke plek op een unieke manier aanvoelt als thuis.<br> <br>
+                Zo hoop ik mijn band met deze drie plaatsen te versterken en te delen en anderen een glimp te geven van de verbindingen die ik voel met mijn thuis. Maar het is niet alleen een persoonlijke zoektocht naar de betekenis van mijn thuis, maar ik hoop de kijker ook te motiveren om na te denken over hun eigen connectie met hun thuis.<br> <br>
+                <hr>
+                <br>"heimat" is a photo project that focuses on my home in Belgium, Switzerland and Croatia, three places that have a deep meaning to me because of my background and family, each feels like a piece of home. That sense of "home" is not always easy and sometimes it's hard to know exactly where you really belong. This search forms the base of this project.<br> <br>
+                In the project, I look for the differences and similarities between these countries, the beauty of everyday life and the complexity of "home". Both the physical environment and the feeling of "home" are portrayed, in this way I want to show how my photographs adapt depending on the location and how each place feels like home in a unique way.<br> <br>
+                In this way, I hope to strengthen and share my bond with these three places and give others a glimpse of the connections I feel to my home. But it is not only a personal search for the meaning of my home, but I also hope to motivate viewers to think about their own connection to their home.<br> <br>
+
+            </h3>
+            <img src="DDKpitch.1.jpg" class="responsive-img">
+            <img src="DDKpitch.28.jpg" class="responsive-img">
+            <img src="DDKpitch.15.jpg" class="responsive-img">
+            <img src="33.jpg" class="responsive-img">
+            <img src="DDKpitch.6.jpg" class="responsive-img">
+            <img src="DDKpitch.5.jpg" class="responsive-img">
+            <img src="29.jpg" class="responsive-img">
+            <img src="DDKpitch.13.jpg" class="responsive-img">
+            <img src="DDKpitch.24.jpg" class="responsive-img">
+            <img src="DDKpitch.27.jpg" class="responsive-img">
+            <img src="DDKpitch.9.jpg" class="responsive-img">
+            <img src="DDKpitch.7.jpg" class="responsive-img">
+            <img src="DDKpitch.10.jpg" class="responsive-img">
+            <img src="35.jpg" class="responsive-img">
+            <img src="DDKpitch.20.jpg" class="responsive-img">
+            <img src="DDKpitch.3.jpg" class="responsive-img">
+            <img src="DDKpitch.11.jpg" class="responsive-img">
+            <img src="DDKpitch.25.jpg" class="responsive-img">
+            <img src="DDKpitch.14.jpg" class="responsive-img">
+            <img src="DDKpitch.23.jpg" class="responsive-img">
+            <img src="36.jpg" class="responsive-img">
+            <img src="DDKpitch.12.jpg" class="responsive-img">
+            <img src="1(21).jpg" class="responsive-img">
+            <img src="DDKpitch.18.jpg" class="responsive-img">
+            <img src="34.jpg" class="responsive-img">
+            <img src="30.jpg" class="responsive-img">
+            <img src="DDKpitch.21.jpg" class="responsive-img">
+            <img src="1(20).jpg" class="responsive-img">
+            <img src="32.jpg" class="responsive-img">
+            <img src="DDKpitch.17.jpg" class="responsive-img">
+            <img src="31.jpg" class="responsive-img">
+            <img src="DDKpitch.4.jpg" class="responsive-img">
+            <img src="DDKpitch.2.jpg" class="responsive-img">
+        </div>
+        <div class="back-to-top" id="backToTop">
+        <a href="#top">↑ back to top</a>
+        </div>
+    <footer>
+        &copy; 2024 vid timmermans all rights reserved
+    </footer>
+    <script>
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileNav = document.getElementById('mobile-nav');
+
+            if (menuToggle && mobileNav) {
+                menuToggle.addEventListener('click', function() {
+                    mobileNav.classList.toggle('open');
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
