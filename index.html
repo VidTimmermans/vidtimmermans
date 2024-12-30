@@ -51,35 +51,35 @@
             box-sizing: border-box; /* Include padding in the element's total width and height */
         }
 
-            header {
-                background-color: #ffffff;
-                padding: 10px 0;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-wrap: wrap;
-                width: 100%; /* Ensure full width */
-                box-sizing: border-box; /* Include padding in width */
-            }
+        header {
+            background-color: #ffffff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%; /* Ensure full width */
+            box-sizing: border-box; /* Include padding in width */
+        }
 
-            nav {
-                display: inline-block;
-                padding: 0 0 0 15px; /* Remove padding around navigation */
-                margin: -3px 0 0 0 ; /* Remove margin from navigation */
-            }
+        nav {
+            display: inline-block;
+            padding: 0 0 0 15px; /* Remove padding around navigation */
+            margin: -3px 0 0 0 ; /* Remove margin from navigation */
+        }
 
-            nav a {
-                color: #282828;
-                text-decoration: none;
-                margin: 0 5px 0 10px; /* Space between navigation links */
-                padding: 0px 0px 0 0px; /* Padding around navigation links */
-                font-size: 20px;
-                display: inline-block;
-                text-align: center;
-                width: 100px; /* Set a fixed width for navigation links */
-                white-space: nowrap; /* Prevent text from wrapping */
-                overflow: visible; /* Hide overflow text */
-            }        
+        nav a {
+            color: #282828;
+            text-decoration: none;
+            margin: 0 5px 0 10px; /* Space between navigation links */
+            padding: 0px 0px 0 0px; /* Padding around navigation links */
+            font-size: 20px;
+            display: inline-block;
+            text-align: center;
+            width: 100px; /* Set a fixed width for navigation links */
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: visible; /* Hide overflow text */
+        }        
 
         nav a:hover {
             text-transform: uppercase; /* Transform text to uppercase on hover */
@@ -93,7 +93,6 @@
             position: relative; /* Verander de positionering naar relatieve positie */
             top: -1px; /* Verplaats de iconen 1px naar boven */
         }
-
 
         .social-icons a {
             color: #282828;
@@ -118,7 +117,6 @@
             position: relative; /* Ensure positioning is correct */
             min-height: 80vh;
         }
-
 
         h1 {
             color: #282828;
@@ -189,7 +187,6 @@
         }
 
         @media (max-width: 8in) {
-            
             body {
                 font-size: 25px;
             }
@@ -248,7 +245,7 @@
                 font-size: 13px;
             }
         }
-        
+
         .back-to-top {
             text-align: center;
             margin: 20px 0;
@@ -266,136 +263,56 @@
             text-transform: uppercase;
         }
 
-                /* Styles for Selected Works Section */
+        /* Styles for Selected Works Section */
         .selected-works {
             text-align: center;
             width: 100%;
             background-color: #ffffff;
             padding: 20px 0;
             cursor: pointer;
-            transition: opacity 0.7s ease;
+            transition: opacity 0.7s ease; /* Zorg voor een soepele overgang */
             z-index: 10;
             position: static;
             bottom: 0;
             padding-bottom: 100px;
+            opacity: 1; /* Start met volledige zichtbaarheid */
         }
 
-        .selected-works h2 {
-            margin: -2px;
-            margin-top:-40px;
-            font-size: 20px; /* Reduced font size */
-            color: #282828;
-        }
-        
-        .selected-works i {
-            font-size: 18px; /* Reduced arrow size */
-            color: #282828;
-            margin: 0px;
-        }
-        .responsive-img {
-                width: 100%;
-                height: auto;
-                object-fit: cover;
-                border: 12px solid #ffffff;
-                box-sizing: border-box;
-            }
-        @media (min-width: 768px) {
-                .responsive-img {
-                    max-width: 75%;
-                    margin: 0 0 100px 0;
-                }
-            }
-
-        .show-photos .responsive-img {
-            display: flex; /* Show photos when the class is added */
+        .selected-works.hidden {
+            opacity: 0; /* Verberg de sectie */
         }
     </style>
 </head>
+
 <body>
+    <header>
+        <a href="#" class="menu-toggle">Menu</a>
+        <nav id="mobile-nav" class="mobile-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Work</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+    </header>
+    
     <div class="container">
-        <div class="mobile-nav" id="mobile-nav">
-            <a href="/">home</a>
-            <a href="/locations">locations</a>
-            <a href="/projects">projects</a>
-            <a href="/about">about</a>
-            <a href="/contact">contact</a>
-        </div>
-        <header>
-            <span class="menu-toggle">menu</span>
-            <nav>
-                <a href="/">home</a>
-                <a href="/locations">locations</a>
-                <a href="/projects">projects</a>
-                <a href="/about">about</a>
-                <a href="/contact">contact</a>
-            </nav>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/vidtimmermans" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@vidtimmermans" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="mailto:timmermansvid@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-        </header>
         <div class="content">
-            <h1>vid timmermans</h1>
+            <h1>Welcome to Vid Timmermans' Photography</h1>
+            <div id="selected-works" class="selected-works">
+                <h2>Selected Works</h2>
+                <p>Click to view my latest photography projects!</p>
+            </div>
         </div>
-
-        <!-- Selected Works Section -->
-        <div class="selected-works" id="selected-works">
-            <h2>selected works</h2>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-
-<div class="content">
-<img src="vidtimmermans/1.jpg" class="responsive-img">
-<img src="vidtimmermans/2.jpg" class="responsive-img">
-<img src="vidtimmermans/3.2.jpg" class="responsive-img">
-<img src="vidtimmermans/3.3.jpg" class="responsive-img">
-<img src="vidtimmermans/3.jpg" class="responsive-img">
-<img src="vidtimmermans/4.jpg" class="responsive-img">
-<img src="vidtimmermans/5.jpg" class="responsive-img">
-<img src="vidtimmermans/6.jpg" class="responsive-img">
-<img src="vidtimmermans/7.1.jpg" class="responsive-img">
-<img src="vidtimmermans/7.jpg" class="responsive-img">
-<img src="vidtimmermans/8.1.jpg" class="responsive-img">
-<img src="vidtimmermans/8.jpg" class="responsive-img">
-<img src="vidtimmermans/9.jpg" class="responsive-img">
-<img src="vidtimmermans/10.2.jpg" class="responsive-img">
-<img src="vidtimmermans/10.jpg" class="responsive-img">
-<img src="vidtimmermans/11.jpg" class="responsive-img">
-<img src="vidtimmermans/12.1.jpg" class="responsive-img">
-<img src="vidtimmermans/12.jpg" class="responsive-img">
-<img src="vidtimmermans/13.1.jpg" class="responsive-img">
-<img src="vidtimmermans/13.jpg" class="responsive-img">
-<img src="vidtimmermans/14.jpg" class="responsive-img">
-<img src="vidtimmermans/15.jpg" class="responsive-img">
-<img src="vidtimmermans/16.jpg" class="responsive-img">
-<img src="vidtimmermans/17.jpg" class="responsive-img">
-<img src="vidtimmermans/18.jpg" class="responsive-img">
-<img src="vidtimmermans/19.jpg" class="responsive-img">
-<img src="vidtimmermans/20.jpg" class="responsive-img">
-<img src="vidtimmermans/22.jpg" class="responsive-img">
-<img src="vidtimmermans/23.jpg" class="responsive-img">
-<img src="vidtimmermans/24.jpg" class="responsive-img">
-<img src="vidtimmermans/25.jpg" class="responsive-img">
-<img src="vidtimmermans/26.jpg" class="responsive-img">
-<img src="vidtimmermans/27.jpg" class="responsive-img">
-<img src="vidtimmermans/28.jpg" class="responsive-img">
-<img src="vidtimmermans/29.jpg" class="responsive-img">
-<img src="vidtimmermans/30.jpg" class="responsive-img">
-<img src="vidtimmermans/31.jpg" class="responsive-img">
-<img src="vidtimmermans/32.jpg" class="responsive-img">
-<img src="vidtimmermans/33.jpg" class="responsive-img">
-</div>
-
-
-        <div class="back-to-top" id="backToTop">
-            <a href="#top">↑ back to top</a>
-        </div>
-
-        <footer>
-            &copy; 2024 vid timmermans all rights reserved
-        </footer>
     </div>
+
+    <footer>
+        <p>&copy; 2023 Vid Timmermans. All rights reserved.</p>
+    </footer>
 
     <script>
         document.addEventListener('contextmenu', function(event) {
@@ -416,12 +333,11 @@
 
             if (photosSection && selectedWorksSection) {
                 window.addEventListener('scroll', function() {
-                    if (window.scrollY > 10) {
-                        photosSection.classList.add('show-photos');
-                        selectedWorksSection.style.opacity = '0';
+                    const scrollY = window.scrollY;
+                    if (scrollY > 10) {
+                        selectedWorksSection.classList.add('hidden'); // Voeg de klasse toe om te vervagen
                     } else {
-                        photosSection.classList.remove('show-photos');
-                        selectedWorksSection.style.opacity = '1';
+                        selectedWorksSection.classList.remove('hidden'); // Verwijder de klasse als je bovenaan bent
                     }
                 });
 
