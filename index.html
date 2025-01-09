@@ -413,6 +413,28 @@
                     mobileNav.classList.toggle('open');
                 });
             }
+
+            if (photosSection && selectedWorksSection) {
+                // Voeg een scroll-eventlistener toe aan het venster
+                window.addEventListener('scroll', function () {
+                    // Controleer de scrollpositie
+                    if (window.scrollY > 10) {
+                        photosSection.classList.add('show-photos');
+                        selectedWorksSection.style.opacity = '0';
+                    } else {
+                        photosSection.classList.remove('show-photos');
+                        selectedWorksSection.style.opacity = '1';
+                    }
+                });
+            
+                // Voeg een klik-eventlistener toe aan selectedWorksSection
+                selectedWorksSection.addEventListener('click', function () {
+                    photosSection.classList.toggle('show-photos');
+                });
+            } else {
+                console.error('photosSection of selectedWorksSection bestaat niet in de DOM.');
+            }
+
         });
     </script>
 </body>
