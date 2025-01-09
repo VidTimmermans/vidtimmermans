@@ -408,18 +408,21 @@
             });
         }
 
-        // Scroll-functionaliteit voor het verbergen/tonen van tekst
+        // Scroll-functionaliteit voor het verbergen/tonen van tekst en icoon
         if (selectedWorksSection) {
-            const selectedWorksText = selectedWorksSection.querySelector('h2, i'); // Selecteer tekst en icoon
+            // Selecteer zowel de <h2> als de <i> in 'selected works'
+            const selectedWorksElements = selectedWorksSection.querySelectorAll('h2, i');
 
             window.addEventListener('scroll', function () {
-                if (window.scrollY > 10) {
-                    // Verberg de tekst in 'selected works'
-                    selectedWorksText.style.opacity = '0';
-                } else {
-                    // Toon de tekst in 'selected works'
-                    selectedWorksText.style.opacity = '1';
-                }
+                selectedWorksElements.forEach(element => {
+                    if (window.scrollY > 10) {
+                        // Verberg de elementen
+                        element.style.opacity = '0';
+                    } else {
+                        // Toon de elementen
+                        element.style.opacity = '1';
+                    }
+                });
             });
         } else {
             console.error('Geselecteerde werken-sectie niet gevonden.');
