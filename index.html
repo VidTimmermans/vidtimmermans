@@ -413,22 +413,6 @@
                     mobileNav.classList.toggle('open');
                 });
             }
-
-            if (photosSection && selectedWorksSection) {
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > 10) {
-                        photosSection.classList.add('show-photos');
-                        selectedWorksSection.style.opacity = '0';
-                    } else {
-                        photosSection.classList.remove('show-photos');
-                        selectedWorksSection.style.opacity = '1';
-                    }
-                });
-
-                selectedWorksSection.addEventListener('click', function() {
-                    photosSection.classList.toggle('show-photos');
-                });
-            }
         });
     </script>
 </body>
