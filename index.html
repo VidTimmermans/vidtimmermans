@@ -414,17 +414,9 @@
         if (responsiveImages.length > 0 && selectedWorksSection) {
             window.addEventListener('scroll', function () {
                 if (window.scrollY > 10) {
-                    // Voeg de klasse 'show-photos' toe aan alle afbeeldingen
-                    responsiveImages.forEach(image => {
-                        image.classList.add('show-photos');
-                    });
                     // Verberg de geselecteerde werken-sectie
                     selectedWorksSection.style.opacity = '0';
                 } else {
-                    // Verwijder de klasse 'show-photos' van alle afbeeldingen
-                    responsiveImages.forEach(image => {
-                        image.classList.remove('show-photos');
-                    });
                     // Toon de geselecteerde werken-sectie
                     selectedWorksSection.style.opacity = '1';
                 }
