@@ -272,7 +272,7 @@
             width: 100%;
             background-color: #ffffff;
             padding: 20px 0;
-            transition: opacity 0.7s ease;
+            transition: opacity 1s ease;
             z-index: 10;
             position: static;
             bottom: 0;
@@ -396,11 +396,10 @@
         </footer>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
         const menuToggle = document.querySelector('.menu-toggle');
         const mobileNav = document.getElementById('mobile-nav');
-        const responsiveImages = document.querySelectorAll('.responsive-img');
         const selectedWorksSection = document.getElementById('selected-works');
 
         // Menu toggle functionaliteit
@@ -410,28 +409,24 @@
             });
         }
 
-        // Scroll-functionaliteit
-        if (responsiveImages.length > 0 && selectedWorksSection) {
+        // Scroll-functionaliteit voor het verbergen/tonen van tekst
+        if (selectedWorksSection) {
+            const selectedWorksText = selectedWorksSection.querySelector('h2, i'); // Selecteer tekst en icoon
+
             window.addEventListener('scroll', function () {
                 if (window.scrollY > 10) {
-                    // Verberg de geselecteerde werken-sectie
-                    selectedWorksSection.style.opacity = '0';
+                    // Verberg de tekst in 'selected works'
+                    selectedWorksText.style.opacity = '0';
                 } else {
-                    // Toon de geselecteerde werken-sectie
-                    selectedWorksSection.style.opacity = '1';
+                    // Toon de tekst in 'selected works'
+                    selectedWorksText.style.opacity = '1';
                 }
             });
-
-            // Klikfunctionaliteit voor de 'selected-works'-sectie
-            selectedWorksSection.addEventListener('click', function () {
-                responsiveImages.forEach(image => {
-                    image.classList.toggle('show-photos');
-                });
-            });
         } else {
-            console.error('Responsive afbeeldingen of geselecteerde werken sectie niet gevonden.');
+            console.error('Geselecteerde werken-sectie niet gevonden.');
         }
     });
-    </script>
+</script>
+
 </body>
 </html>
