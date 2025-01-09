@@ -395,7 +395,6 @@
             &copy; 2024 vid timmermans all rights reserved
         </footer>
     </div>
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const menuToggle = document.querySelector('.menu-toggle');
@@ -409,20 +408,17 @@
             });
         }
 
-        // Scroll-functionaliteit voor het verbergen/tonen van tekst en pijl
+        // Scroll-functionaliteit voor het verbergen/tonen van tekst
         if (selectedWorksSection) {
-            const selectedWorksText = selectedWorksSection.querySelector('h2');
-            const selectedWorksIcon = selectedWorksSection.querySelector('i');
+            const selectedWorksText = selectedWorksSection.querySelector('h2, i'); // Selecteer tekst en icoon
 
             window.addEventListener('scroll', function () {
                 if (window.scrollY > 10) {
-                    // Verberg de tekst en de pijl in 'selected works'
-                    if (selectedWorksText) selectedWorksText.style.opacity = '1';
-                    if (selectedWorksIcon) selectedWorksIcon.style.opacity = '1';
+                    // Verberg de tekst in 'selected works'
+                    if selectedWorksText.style.opacity = '0';
                 } else {
-                    // Toon de tekst en de pijl in 'selected works'
-                    if (selectedWorksText) selectedWorksText.style.opacity = '0';
-                    if (selectedWorksIcon) selectedWorksIcon.style.opacity = '0';
+                    // Toon de tekst in 'selected works'
+                    selectedWorksText.style.opacity = '1';
                 }
             });
         } else {
@@ -430,5 +426,6 @@
         }
     });
 </script>
+
 </body>
 </html>
