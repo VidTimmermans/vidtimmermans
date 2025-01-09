@@ -396,35 +396,49 @@
     </div>
 
     <script>
-        document.addEventListener('contextmenu', function(event) {
-            event.preventDefault();
-        });
-
         document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const mobileNav = document.getElementById('mobile-nav');
-            const photosSection = document.getElementById('responsive-img');
-            const selectedWorksSection = document.getElementById('selected-works');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        const responsiveImages = document.querySelectorAll('.responsive-img');
+        const selectedWorksSection = document.getElementById('selected-works');
 
-            if (menuToggle && mobileNav) {
-                menuToggle.addEventListener('click', function() {
-                    mobileNav.classList.toggle('open');
+        // Menu toggle functionaliteit
+        if (menuToggle && mobileNav) {
+            menuToggle.addEventListener('click', function() {
+                mobileNav.classList.toggle('open');
+            });
+        }
+
+        // Scroll-functionaliteit
+        if (responsiveImages.length > 0 && selectedWorksSection) {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 10) {
+                    // Voeg de klasse 'show-photos' toe aan alle afbeeldingen
+                    responsiveImages.forEach(image => {
+                        image.classList.add('show-photos');
+                    });
+                    // Verberg de geselecteerde werken-sectie
+                    selectedWorksSection.style.opacity = '0';
+                } else {
+                    // Verwijder de klasse 'show-photos' van alle afbeeldingen
+                    responsiveImages.forEach(image => {
+                        image.classList.remove('show-photos');
+                    });
+                    // Toon de geselecteerde werken-sectie
+                    selectedWorksSection.style.opacity = '1';
+                }
+            });
+
+            // Klikfunctionaliteit voor de 'selected-works'-sectie
+            selectedWorksSection.addEventListener('click', function () {
+                responsiveImages.forEach(image => {
+                    image.classList.toggle('show-photos');
                 });
-            }
-
-            if (photosSection && selectedWorksSection) {
-                window.addEventListener('scroll', function () {
-                    if (window.scrollY > 0) {
-                        photosSection.classList.add('show-photos');
-                        selectedWorksSection.style.opacity = '0';
-                    } else {
-                        photosSection.classList.remove('show-photos');
-                        selectedWorksSection.style.opacity = '1';
-                    }
-                });
-            }
-
-        });
+            });
+        } else {
+            console.error('Responsive afbeeldingen of geselecteerde werken sectie niet gevonden.');
+        }
+    });
     </script>
 </body>
 </html>
