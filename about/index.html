@@ -348,6 +348,18 @@
             .back-to-top a:hover {
                 text-transform: uppercase;
             }
+
+            .responsive-img {
+                width: 100%; 
+                height: auto;
+                display: block;
+            }
+            @media (min-width: 768px) {
+                .responsive-img {
+                    max-width: 75%;
+                    margin: 0 0 0px 0;
+                }
+            }
         
     </style>
     <script>
@@ -383,6 +395,7 @@
         <div class="content">
             <h1>about</h1>
             <h2>born 2007 in zürich, switzerland . lives in ghent, belgium<br><br></h2>
+            <img src="about.jpg" class="responsive-img">
             <h3>CV<br><br>
             WORK AND PUBLICATIONS<br>
             2024<br>
