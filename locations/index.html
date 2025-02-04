@@ -154,16 +154,20 @@
 
             h1 {
                 color: #282828;
-                text-align: center;
+                text-align: left;
                 margin: 5px 0 50px 0;
             }
+            @font-face { font-family: Barlow; src: url('Barlow-Regular.ttf'); } 
             h2 {
+                border: 0.5px solid #282828;
                 color:#282828;
-                text-align: center;
+                text-align: left;
                 font-size: 17px;
-                margin: 0px 0px 0px 0px;
+                padding: 0.5em 8em 1em 0.5em;
+                margin: 0 -1em;
                 text-decoration: none;
                 font-weight: 300;
+                font-family: Barlow;
             }
             h2 p {
                 margin: 0px 0 20px;
@@ -345,19 +349,20 @@
             <h1>locations</h1>
             <div class="locations">
                 <h2>
-                    <p><a href="croatia2024">croatia 2024</a></p>
-                    <p><a href="ghent2024">ghent 2024</a></p>
-                    <p><a href="switzerland2024">switzerland 2024</a></p>
-                    <p><a href="cologne2024">cologne 2024</a></p>
-                    <p><a href="rome2024">rome 2024</a></p>
-                    <p><a href="ghent2023">ghent 2023</a></p>
-                    <p><a href="switzerland2023">switzerland 2023</a></p>
-                    <p><a href="croatia2023">croatia 2023</a></p>
+                    BELGIUM<br>
+                    &emsp;<a href="ghent2024">2024</a> . <a href="ghent2023">2023</a><br>
+                    SWITZERLAND<br>
+                    &emsp;<a href="switzerland2024">2024</a> . <a href="switzerland2023">2023</a><br>
+                    CROATIA<br>
+                    &emsp;<a href="croatia2024">2024</a> . <a href="croatia2023">2023</a><br>
+                    OTHER<br>
+                    &emsp;<a href="cologne2024">COLOGNE 2024</a><br>
+                    &emsp;<a href="rome2024">ROME 2024</a>
                 </h2>
             </div>
         </div>
     <footer>
-        &copy; 2024 vid timmermans all rights reserved
+        &copy; 2023<script>new Date().getFullYear()>2023&&document.write("-"+new Date().getFullYear());</script> vid timmermans all rights reserved
     </footer>
     <script>
         document.addEventListener('contextmenu', function(event) {
