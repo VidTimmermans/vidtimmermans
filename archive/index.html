@@ -22,6 +22,9 @@
     <meta property="og:type" content="website">
     
     <style>
+        *:where(a, button, [role="button"], input, select, textarea) {
+        -webkit-tap-highlight-color: transparent;
+        }
         .responsive-img {
             width: 100%;
             height: auto;
@@ -197,6 +200,10 @@
                 width: 100px; /* Same width as nav links */
                 text-align: left; /* Center align text */
                 padding-left: 30px;
+            
+                /* Fix tap highlight */
+                -webkit-tap-highlight-color: transparent;
+                user-select: none; /* Prevent text selection */
             }
 
             .mobile-nav {
