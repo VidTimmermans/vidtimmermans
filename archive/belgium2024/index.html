@@ -13,16 +13,19 @@
     <meta name="keywords" content="Belgium, 2024, fotografie, Vid Timmermans, streetphotography, photography, fotograaf, photographer">
     <meta name="author" content="Vid Timmermans">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.vidtimmermans.com/locations/belgium2024">
+    <link rel="canonical" href="https://www.vidtimmermans.com/archive/belgium2024">
 
     <!--Open Graph Meta Tags-->
     <meta property="og:title" content="Belgium - 2024">
     <meta property="og:description" content="Photos of Belgium, 2024.">
-    <meta property="og:url" content="https://www.vidtimmermans.com/locations/belgium2024">
+    <meta property="og:url" content="https://www.vidtimmermans.com/archive/belgium2024">
     <meta property="og:type" content="website">
 
 
     <style>
+        *:where(a, button, [role="button"], input, select, textarea) {
+        -webkit-tap-highlight-color: transparent;
+        }
 
         .responsive-img {
             width: 100%;
@@ -174,6 +177,10 @@
                 width: 100px; /* Same width as nav links */
                 text-align: left; /* Center align text */
                 padding-left: 30px;
+            
+                /* Fix tap highlight */
+                -webkit-tap-highlight-color: transparent;
+                user-select: none; /* Prevent text selection */
             }
 
             .mobile-nav {
@@ -302,7 +309,7 @@
     <div class="container">
         <div class="mobile-nav" id="mobile-nav">
             <a href="/">home</a>
-            <a href="/locations">locations</a>
+            <a href="/archive">archive</a>
             <a href="/projects">projects</a>
             <a href="/about">about</a>
             <a href="/contact">contact</a>
@@ -311,7 +318,7 @@
             <span class="menu-toggle">menu</span>
             <nav>
                 <a href="/">home</a>
-                <a href="/locations">locations</a>
+                <a href="/archive">archive</a>
                 <a href="/projects">projects</a>
                 <a href="/about">about</a>
                 <a href="/contact">contact</a>
