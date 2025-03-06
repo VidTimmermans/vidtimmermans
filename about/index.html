@@ -25,24 +25,7 @@
         *:where(a, button, [role="button"], input, select, textarea) {
         -webkit-tap-highlight-color: transparent;
         }
-        @media (min-width: 768px) {
-            .content {
-                margin: 0 0 100px 0;
-            }
-        }
-        .responsive-img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border: 12px solid #ffffff;
-            box-sizing: border-box;
-        }
-        @media (min-width: 768px) {
-            .responsive-img {
-                max-width: 75%;
-                margin: 0 0 100px 0;
-            }
-        }
+        
             /* Hide scrollbar for Chrome, Safari and Opera */
             .example::-webkit-scrollbar {
                 display: none;
@@ -150,7 +133,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
+                align-items: normal;
                 margin: 0;
                 width: 100%;
                 box-sizing: border-box;
@@ -180,11 +163,21 @@
                 color: #282828;
                 text-align: justify;
                 font-size: 15px;
-                padding: 2% 5%;
-                margin: 0 5%;
+                padding: 20px 50px;
+                margin: 0 50px;
                 text-decoration: none;
                 font-weight: 300;
                 border: 0.5px solid #282828;
+            }
+            h4 {
+                font-family: Barlow;
+                color: #282828;
+                text-align: right;
+                font-size: 13px;
+                padding: 0px 0px 30px 0px;
+                margin: 0 50px 0px 0px;
+                text-decoration: none;
+                font-weight: 300;
             }
             h2 p {
                 margin: 0px 0 0px;
@@ -290,12 +283,16 @@
                 text-align: center;
             }
             h3{
-                padding: 2% 2% 2% 2%;
-                margin: 0 10% 0% 10%;
+                padding: 10px 10px 10px 10px;
+                margin: 0 30px 0px 30px;
+            }
+            h4{
+                padding: 0px 0px 25px 0px;
+                margin: 0 30px 0px 0px;
             }
             .content {
                 width: 100%;
-                text-align: center;
+                text-align: normal;
             }
         }
         @media (max-width: 4in) {
@@ -327,15 +324,19 @@
                 font-size: 13px;
             }
             h3{ 
-                padding: 2% 2% 2% 2%; 
-                margin: 0 5% 0 5%; 
+                padding: 10px 10px 10px 10px; 
+                margin: 0 30px 0 30px; 
+            } 
+            h4{ 
+                padding: 0px 0px 25px 0px; 
+                margin: 0 50px 0 0px; 
             } 
             h2{ 
                 padding: 0 2% 0 2%; 
             }
             .content {
                 width: 100%;
-                text-align: center;
+                text-align: normal;
             }
         }
         
@@ -357,14 +358,15 @@
             }
 
             .responsive-img {
-                width: 100%; 
+                max-width: 100%;
                 height: auto;
-                display: block;
+                align-self: center;
+                padding: 0px 30px;
+                box-sizing: border-box;
             }
             @media (min-width: 768px) {
                 .responsive-img {
-                    max-width: 75%;
-                    margin: 0 0 0px 0;
+                    padding: 0px 50px;
                 }
             }
         
@@ -403,6 +405,7 @@
             <h1>about</h1>
             <h2>born 2007 in zürich, switzerland . lives in ghent, belgium<br><br></h2>
             <img src="about.jpg" class="responsive-img">
+            <h4>&copy;Kari Jans</h4>
             <h3>CV<br><br>
             WORK AND PUBLICATIONS<br>
             2024<br>
