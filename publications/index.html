@@ -101,26 +101,29 @@
             }
 
             nav {
-                display: inline-block;
-                padding: 0px 0 0 15px; /* Remove padding around navigation */
-                margin: 0px 0 ; /* Remove margin from navigation */
+                display: flex;
+                flex-direction: row;
+                gap: 10px; /* vaste afstand tussen de hokjes */
+                padding-left: 15px;
+                justify-content: flex-start; /* links uitgelijnd */
             }
 
             nav a {
-                color: #282828;
+                width: 120px; /* vast 'hokje' voor elk item */
+                height: 40px;
+                display: flex;
+                justify-content: center; /* tekst gecentreerd */
+                align-items: center;
                 text-decoration: none;
-                margin: 0 5px 0 10px; /* Space between navigation links */
-                padding: 0 0px 0 0px; /* Padding around navigation links */
                 font-size: 20px;
-                display: inline-block;
-                text-align: center;
-                width: 100px; /* Set a fixed width for navigation links */
-                white-space: nowrap; /* Prevent text from wrapping */
-                overflow: visible; /* Hide overflow text */
+                color: #282828;
+                text-transform: lowercase;
+                white-space: nowrap;
+                transition: text-transform 0.3s ease, letter-spacing 0.3s ease;
             }
 
             nav a:hover {
-                text-transform: uppercase; /* Transform text to uppercase on hover */
+                text-transform: uppercase;
             }
 
             .social-icons {
@@ -238,7 +241,7 @@
                 max-height: 500px; /* A large enough max-height to show content */
             }
            
-        @media (max-width: 9in) {
+        @media (max-width: 10in) {
             
             body {
                 font-size: 15px;
@@ -351,8 +354,8 @@
             <h1>publications</h1>
             <div class="archive">
                 <h2>
-                    <p><a href="zine02">zine02</a></p>
-                    <p><a href="zine01">zine01</a></p>
+                    <p><a href="02black&white">02 black & white</a></p>
+                    <p><a href="01color">01 color</a></p>
                 </h2>
             </div>
         </div>
