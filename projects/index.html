@@ -101,22 +101,25 @@
             }
 
             nav {
-                display: inline-block;
-                padding: 0px 0 0 15px; /* Remove padding around navigation */
-                margin: 0px 0 ; /* Remove margin from navigation */
+                display: flex;
+                flex-direction: row;
+                gap: 10px; /* vaste afstand tussen de hokjes */
+                padding-left: 15px;
+                justify-content: flex-start; /* links uitgelijnd */
             }
 
             nav a {
-                color: #282828;
+                width: 120px; /* vast 'hokje' voor elk item */
+                height: 40px;
+                display: flex;
+                justify-content: center; /* tekst gecentreerd */
+                align-items: center;
                 text-decoration: none;
-                margin: 0 5px 0 10px; /* Space between navigation links */
-                padding: 0 0px 0 0px; /* Padding around navigation links */
                 font-size: 20px;
-                display: inline-block;
-                text-align: center;
-                width: 100px; /* Set a fixed width for navigation links */
-                white-space: nowrap; /* Prevent text from wrapping */
-                overflow: visible; /* Hide overflow text */
+                color: #282828;
+                text-transform: lowercase;
+                white-space: nowrap;
+                transition: text-transform 0.3s ease, letter-spacing 0.3s ease;
             }
 
             nav a:hover {
@@ -238,7 +241,7 @@
                 max-height: 500px; /* A large enough max-height to show content */
             }
            
-        @media (max-width: 8in) {
+        @media (max-width: 10in) {
             
             body {
                 font-size: 15px;
@@ -341,7 +344,8 @@
             </nav>
             <div class="social-icons">
                 <a href="https://www.instagram.com/vidtimmermans" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@vidtimmermans" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61563081605015" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/channel/UCm63mbvwstVSwRQ9B_-4Qaw" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 <a href="mailto:timmermansvid@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </header>

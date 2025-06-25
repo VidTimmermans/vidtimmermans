@@ -88,24 +88,26 @@
             }
 
             nav {
-                display: inline-block;
-                padding: 0px 0 0 15px; /* Remove padding around navigation */
-                margin: 0px 0 ; /* Remove margin from navigation */
+                display: flex;
+                flex-direction: row;
+                gap: 10px; /* vaste afstand tussen de hokjes */
+                padding-left: 15px;
+                justify-content: flex-start; /* links uitgelijnd */
             }
 
             nav a {
-                color: #282828;
+                width: 120px; /* vast 'hokje' voor elk item */
+                height: 40px;
+                display: flex;
+                justify-content: center; /* tekst gecentreerd */
+                align-items: center;
                 text-decoration: none;
-                margin: 0 5px 0 10px; /* Space between navigation links */
-                padding: 0 0px 0 0px; /* Padding around navigation links */
                 font-size: 20px;
-                display: inline-block;
-                text-align: center;
-                width: 100px; /* Set a fixed width for navigation links */
-                white-space: nowrap; /* Prevent text from wrapping */
-                overflow: visible; /* Hide overflow text */
+                color: #282828;
+                text-transform: lowercase;
+                white-space: nowrap;
+                transition: text-transform 0.3s ease, letter-spacing 0.3s ease;
             }
-
             nav a:hover {
                 text-transform: uppercase; /* Transform text to uppercase on hover */
             }
@@ -246,7 +248,7 @@
             .mobile-nav.open {
                 max-height: 500px; /* A large enough max-height to show content */
             }
-        @media (max-width: 8in) {
+        @media (max-width: 10in) {
             
             body {
                 font-size: 15px;
@@ -381,6 +383,7 @@
             <a href="/">home</a>
             <a href="/archive">archive</a>
             <a href="/projects">projects</a>
+            <a href="/publications">publications</a>
             <a href="/about">about</a>
             <a href="/contact">contact</a>
         </div>
@@ -390,12 +393,14 @@
                 <a href="/">home</a>
                 <a href="/archive">archive</a>
                 <a href="/projects">projects</a>
+                <a href="/publications">publications</a>
                 <a href="/about">about</a>
                 <a href="/contact">contact</a>
             </nav>
             <div class="social-icons">
                 <a href="https://www.instagram.com/vidtimmermans" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@vidtimmermans" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61563081605015" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/channel/UCm63mbvwstVSwRQ9B_-4Qaw" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 <a href="mailto:timmermansvid@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </header>
@@ -405,10 +410,15 @@
             <img src="about.jpg" class="responsive-img">
             <h4>&copy;Kari Jans</h4>
             <h3>CV<br><br>
-            ASSIGNMENTS AND PUBLICATIONS<br>
+            PUBLICATIONS<br>
             2025<br>
+            (upcoming) <u><a href="https://vidtimmermans.com/publications/02color/">02 color</a></u>, zine published by Bruno Devos, <u><a href="https://www.hopperandfuchs.com/products/upcoming-books">HOPPER&FUCHS</a></u><br>
+            (upcoming) <u><a href="https://vidtimmermans.com/publications/01black&white/">01 black & white</a></u>, zine published by Bruno Devos, <u><a href="https://www.hopperandfuchs.com/products/upcoming-books">HOPPER&FUCHS</a></u><br><br>
+            ASSIGNMENTS AND FEATURES<br>
+            2025<br>
+            feature of <u><a href="https://vidtimmermans.com/archive/greece2025/">Greece 2025</a></u> on the <u><a href="https://humaniora.sjc-gent.be/griekenlandreis/">website</a></u> of SJC Visitatie Ghent, Belgium<br>
             photos before and during the dress rehearsal of De Vrouwen Van ... Troje at SJC Visitatie Ghent, Belgium<br>
-            photos used for the poster and advertisement from the performance <u><a href="https://www.facebook.com/events/654903790417058?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D">De Vrouwen Van ... Troje</a></u> at SJC Visitatie Ghent, Belgium, <u><a href="https://humaniora.sjc-gent.be/vrouwen-van-troje/">website</a></u>, <u><a href="https://www.instagram.com/vrouwenvan_troje/">Instagram</a></u>, <u><a href="https://www.facebook.com/photo?fbid=1254332509612409&set=a.583611696684497">Facebook</a></u><br>
+            photos for the poster and advertisement from the performance <u><a href="https://www.facebook.com/events/654903790417058?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D">De Vrouwen Van ... Troje</a></u> at SJC Visitatie Ghent, Belgium, <u><a href="https://humaniora.sjc-gent.be/vrouwen-van-troje/">website</a></u>, <u><a href="https://www.instagram.com/vrouwenvan_troje/">Instagram</a></u>, <u><a href="https://www.facebook.com/photo?fbid=1254332509612409&set=a.583611696684497">Facebook</a></u><br>
             portraits and group photos made for the yearbook of the 6th grade at SJC Visitatie Ghent, Belgium<br>
             photos of <u><a href="https://humaniora.sjc-gent.be/honderddagenquiz/">the fundraising quiz for the 100 dagen</a></u> at SJC Visitatie Ghent, Belgium, <u><a href="https://www.instagram.com/p/DGLq93wMHHp/?img_index=10">Instagram</a></u>, <u><a href="https://www.facebook.com/sintjanscollegegent/posts/pfbid02oM6jeEeZg93ciQavEj8q3i4p5rSa2i8g1CJg4fRpmbBbda5xuxTF9Gsx7DUoyMN7l">Facebook</a></u><br><br>
             2024<br>
@@ -426,9 +436,9 @@
             photos used on <u><a href="https://www.facebook.com/share/p/qg9snqc3gNGJpQj1/">the poster and banner</a></u> of M.A.A.N at SJC Visitatie Ghent, Belgium, <u><a href="https://www.instagram.com/p/Crm9TJuIBZq/">Instagram</a></u>, <u><a href="https://www.facebook.com/people/M-A-A-N/100090405622381/">Facebook</a></u><br><br>
             AWARDS<br>
             2025<br>
-            nominated for Kortgeknipt 2025 with the stop motion film Jévgɘɳɩ IƨpRɩvič at the Kortgeknipt short film festival 2025 in the Stadsschouwburg, Sint-Niklaas, Belgium<br><br>
+            nominated for Kortgeknipt 2025 with the stop motion film Jévgɘɳɩ IƨpRɩvič at the Kortgeknipt short film festival in Sint-Niklaas, Belgium<br><br>
             2024<br>
-            winner of the <u><a href="https://www.donkerekamer.com/shows/ddk-32">DDK #32 Pitch</a></u> with my project <u><a href="https://https://vidtimmermans.com/projects/heimat/">heimat</a></u> at the Minardschouwburg in Ghent, Belgium<br><br>
+            winner of the <u><a href="https://www.donkerekamer.com/shows/ddk-32">DDK #32 Pitch</a></u> with the project <u><a href="https://https://vidtimmermans.com/projects/heimat/">heimat</a></u> at the Minardschouwburg in Ghent, Belgium<br><br>
             2023<br>
             nominated for Kortgeknipt 2023 with the stop motion film <u><a href="https://www.youtube.com/watch?v=CKskbrDgfco&list=LL&index=3">E.T. the remake</a></u> at the Kortgeknipt open air short film festival in Sint-Niklaas, Belgium<br>
             winner of the JEF makers maxi award 2023 with the stop motion film <u><a href="https://www.youtube.com/watch?v=uOEZ54EBxsA">E.T. the remake</a></u> at the JEF jeugdfilm festival in Antwerp, Belgium
