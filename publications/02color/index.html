@@ -361,7 +361,7 @@
 
             .image-text-wrapper .text-container p {
                 margin-top: 0;
-                font-size: 13px;
+                font-size: 15px;
                 font-family: Barlow;
                 line-height: 1.5;
                 margin-left: 15px;
@@ -375,7 +375,7 @@
 
             .image-text-wrapper .text-container a {
                 display: inline-block;
-                margin-top: 150px; /* Verhoog de waarde hier om de knop verder naar beneden te plaatsen */
+                margin-top: 10px; /* Verhoog de waarde hier om de knop verder naar beneden te plaatsen */
                 background-color: #ffffff;
                 color: #000000;
                 text-decoration: none;
@@ -417,6 +417,18 @@
             .image-text-wrapper .text-container a:hover {
                 text-transform: uppercase; /* Verandert de tekst naar hoofdletters bij hover */
             }
+
+            a.button-link {
+                display: inline-block;       /* Maakt het klikgebied net zo groot als de knop */
+                padding: 5px 10px;          /* Ruimte binnen de knop */
+                border: 1.5px solid black;     /* Zwarte omlijning */
+                border-radius: 1px;          /* Mooie afgeronde hoeken */
+                text-decoration: none;       /* Verwijdert de onderstreping */
+                color: black;                /* Tekstkleur */
+                font-family: Barlow;         /* Past bij jouw stijl */
+                transition: background-color 0.3s, color 0.3s; /* Mooie hover-animatie */
+            }
+
 
     </style>
     <script>
@@ -464,11 +476,15 @@
             <div class="text-container">
               <h1>02 color</h1>
               <k>€25.00 - €40.00</k>
-                <p><br>32 pages</p>
-              <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-02-color" target="_blank">02 color</a>
-              <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-combo-01-black--white-02-color" target="_blank">01 black & white + 02 color</a>
-              <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-02-color-limited-edition-of-50" target="_blank">limited edition 02 color</a>
-              <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-combo-limited-edition-01-black--white-02-color" target="_blank">limited edition 01 black & white + 02 color</a>
+                <p><br>Cover + 32 inside pages, 167 x 236mm,
+                    first edition, 200 signed copies, including 50 limited edition copies that come with one signed photograph<br>
+                    Published by Bruno Devos at HOPPER&FUCHS</p>
+                <k>pre-order:</k><br>
+                <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-02-color" target="_blank" class="button-link">02 color</a>
+                <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-02-color-limited-edition-of-50" target="_blank" class="button-link">limited edition 02 color</a><br><br>
+                <k>you may also be interested in:</k><br>
+                <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-combo-01-black--white-02-color" target="_blank" class="button-link">01 black & white + 02 color</a><br>
+                <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-combo-limited-edition-01-black--white-02-color" target="_blank" class="button-link">limited edition 01 black & white + 02 color</a>        
             </div>
          </div>          
     <footer>
