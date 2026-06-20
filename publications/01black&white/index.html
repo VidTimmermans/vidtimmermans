@@ -13,12 +13,12 @@
     <meta name="keywords" content="fotografie, Vid Timmermans, streetphotography, photography, fotograaf, photographer">
     <meta name="author" content="Vid Timmermans">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.vidtimmermans.com/01black&white">
+    <link rel="canonical" href="https://www.vidtimmermans.com/publications/01black&white">
  
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="01black&white">
     <meta property="og:description" content="01black&white, zine of Vid Timmermans.">
-    <meta property="og:url" content="https://www.vidtimmermans.com/01black&white">
+    <meta property="og:url" content="https://www.vidtimmermans.com/publications/01black&white">
     <meta property="og:type" content="website">
     
     <style>
@@ -298,6 +298,7 @@
                     margin: 0 5px;
                     font-size: 13px;
                 }
+                
             }
         
             .back-to-top {
@@ -317,23 +318,34 @@
                 text-transform: uppercase;
             }
             .image-text-wrapper {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: flex-start;
-                gap: 40px;
-                padding: 40px 20px;
+                display: grid;
+                grid-template-columns: 1.2fr 1fr;
+                grid-template-areas:
+                    "image text"
+                    "desc  text";
+                gap: 30px;
                 max-width: 1200px;
                 margin: 80px auto;
+                padding-left: 15px;
+                padding-right: 15px;
             }
+            .image-container {
+                grid-area: image;
+                padding-left: 15px;
+                padding-right: 15px;
+                box-sizing: border-box;
+            }
+
+            .text-container {
+                grid-area: text;
+            }
+
 
             .image-text-wrapper .image-container {
                 flex: 2;
                 min-width: 300px;
                 max-width: 600px;
-                position:relative;
-                margin-left: 10px;
+                position: relative;
             }
 
             .image-text-wrapper .image-container img {
@@ -347,7 +359,7 @@
             .image-text-wrapper .text-container {
                 flex: 1;
                 min-width: 250px;
-                max-width: 400px;
+                max-width: 500px;
                 font-family: Barlow;
             }
 
@@ -384,11 +396,98 @@
                 line-height: 1.5;
             }
 
+            
+
+            .description {
+                flex: 2;
+                min-width: 300px;
+                margin-top: 30px;
+                grid-area: desc;
+                width: 100%;
+                max-width: 600px;
+                box-sizing: border-box;
+                font-family: Barlow;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .description v {
+                display: block;
+                font-size: 15px;
+                line-height: 1.6;
+                text-align: justify;
+                -webkit-hyphens: auto; /* Voor Safari */
+                -ms-hyphens: auto;     /* Voor Internet Explorer/Edge */
+                hyphens: auto;         /* Standaard voor moderne browsers */
+            }
+            .image-container,
+            .description {
+                width: 100%;
+                max-width: 600px;
+            }
+            .slideshow-container {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+            }
+
+            .slideshow-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border: 5px solid #fff;
+                margin-left: -5px;
+            }
+            .slide-btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: none;
+                border: none;
+                font-size: 32px;
+                cursor: pointer;
+                z-index: 10;
+            }
 
             @media (max-width: 800px) {
                 .image-text-wrapper {
+                    display: flex;
                     flex-direction: column;
-                    align-items: flex-start; /* Zet de tekst links uitgelijnd */
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    gap: 20px;
+                    max-width: 500px;
+                }
+                .image-container,
+                .text-container,
+                .description {
+                    width: 100%;
+                    max-width: 500px;
+                }
+                .image-container {
+                    order: 1;
+                    width: 100%;
+                    max-width: 500px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    box-sizing: border-box;
+                }
+
+                .text-container {
+                    order: 2;
+                    width: 100%;
+                    max-width: 500px;
+                }
+
+                .description {
+                    order: 3;
+                    width: 100%;
+                    margin-top: 20px;
+                    max-width: 500px;
+                    margin-top: 50px;
+                    padding-left: 7px;
+                    padding-right: 7px;
+                    box-sizing: border-box;
                 }
 
                 .image-text-wrapper .image-container,
@@ -432,7 +531,6 @@
                 font-family: Barlow;         /* Past bij jouw stijl */
                 transition: background-color 0.3s, color 0.3s; /* Mooie hover-animatie */
             }
-            
 
     </style>
     <script>
@@ -471,24 +569,32 @@
         <div class="image-text-wrapper">
             <!-- Afbeelding -->
             <div class="image-container">
-                <button onclick="previousImage()" style="position: absolute; top: 50%; left: calc(0px - 25px); transform: translateY(-50%); background: none; border: none; font-size: 32px; cursor: pointer;">&#8249;</button>
-                <img id="slideshow" src="1.jpg" alt="Slideshow">
-                <button onclick="nextImage()" style="position: absolute; top: 50%; right: calc(0px - 25px); transform: translateY(-50%); background: none; border: none; font-size: 32px; cursor: pointer;">&#8250;</button>                          
-            </div>
-          
+                <div class="slideshow-container">
+                    <button onclick="previousImage()" style="position: absolute; top: 50%; left: calc(0px - 25px); transform: translateY(-50%); background: none; border: none; font-size: 32px; cursor: pointer;">&#8249;</button>
+                    <button onclick="nextImage()" style="position: absolute; top: 50%; right: calc(0px - 25px); transform: translateY(-50%); background: none; border: none; font-size: 32px; cursor: pointer;">&#8250;</button>   
+                    <img id="slideshow" src="1.jpg" alt="Slideshow">
+                </div>
+            </div> 
             <!-- Tekst -->
             <div class="text-container">
               <h1>01 black & white</h1>
               <k>€25.00 - €40.00</k>
-              <p><br>cover + 32 inside pages, 167 x 236mm,
+              <p><br>
+                paperback, 32 pages, 167 x 236mm, ISBN:9789464002690<br>
                 first edition, 200 signed copies, including 50 limited edition copies that come with one of five signed photographs<br>
-                published by Bruno Devos at HOPPER&FUCHS</p>
-            <k>order here:</k><br>
+                published by HOPPER&FUCHS</p><br>
+                <k>order here:</k><br>
               <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-01-black--white" target="_blank" class="button-link">01 black & white</a><br>
-              <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-01-black--white-limited-edition-of-50" target="_blank" class="button-link">limited edition 01 black & white</a><br><br>
+              <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-01-black--white-limited-edition-of-50" target="_blank" class="button-link">01 black & white (limited edition)</a><br><br>
               <k>you may also be interested in:</k><br>
               <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-combo-01-black--white-02-color" target="_blank" class="button-link">01 black & white + 02 color</a><br>
-              <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-combo-limited-edition-01-black--white-02-color" target="_blank" class="button-link">limited edition 01 black & white + 02 color</a>
+              <a href="https://www.hopperandfuchs.com/products/vid-timmermans-presale-combo-limited-edition-01-black--white-02-color" target="_blank" class="button-link">01 black & white (limited edition) + 02 color (limited edition)</a>
+            </div>
+                                   
+            <div class="description">
+                <v>Vid Timmermans’ <i>01 black & white</i>, part of his ongoing 'heimat' project, takes you to three places that each feel like a piece of home.<br><br>
+                    ‘heimat’ (2024 - ongoing) is a photographic project by Vid Timmermans that focuses on his home in Belgium, Switzerland and Croatia — three countries that hold deep personal meaning because of his background and family. Each place represents a different piece of what “home” means to him. At the same time, the project acknowledges that this sense of belonging is not always simple. The question of where one truly belongs forms the foundation of the work. The project resulted in two publications: <i>01 black & white and 02 color</i>. Together, they present different visual approaches to the same central search.<br><br>
+                    In both publications, Vid explores the differences and similarities between the three countries, paying attention to the beauty of everyday life as well as the complexity of belonging. The physical environment and the emotional experience are portrayed side by side. The separation into black & white and color reflects how his photographic language adapts depending on location and atmosphere, while each place continues to feel like home in its own unique way.<br></v>
             </div>
          </div>          
     <footer>
